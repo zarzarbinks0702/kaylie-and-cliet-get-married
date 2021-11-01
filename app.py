@@ -43,8 +43,7 @@ def rsvp_confirm():
             guest = (name, rsvp, plus_one)
             conn = sql.connect('static/wedding.db')
             cursor = conn.cursor()
-            insert = '''INSERT INTO guest_list(Name, RSVP, 'Plus One')
-            VALUES (?,?,?)'''
+            insert = 'INSERT INTO guest_list(Name, RSVP, Plus_One) VALUES (?,?,?)'
             cursor.execute(insert, guest)
             conn.close()
             message = "RSVP confirmed. We can't wait to celebrate with you!"
