@@ -35,16 +35,17 @@ def registry():
 @app.route("/rsvpConfirm", methods=["GET", "POST"])
 def rsvp_confirm():
     if request.method == "POST":
-        rsvp_key = request.values["key"]
+        rsvp_key = request.form.get("key")
         if rsvp_key in app.config['RSVP-KEYS']:
-            name = request.values["name"]
-            rsvp = request.values["rsvp"]
-            plus_one = request.values["plus-one"]
+            name = request.form.get("name")
+            rsvp = request.form.get("rsvp")
+            plus_one = request.form.get("plus-one")
             guest = (name, rsvp, plus_one)
             conn = sql.connect('static/wedding.db')
             cursor = conn.cursor()
             insert = 'INSERT INTO guest_list(Name, RSVP, Plus_One) VALUES (?,?,?)'
             cursor.execute(insert, guest)
+            conn.commit()
             conn.close()
             message = "RSVP confirmed. We can't wait to celebrate with you!"
         else:

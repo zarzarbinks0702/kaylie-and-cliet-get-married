@@ -22,7 +22,7 @@ header .row{
 h1 {
   font-weight: 700;
   margin: 0;
-  color: #431c5d;
+  color: #30332D;
 }
 
 nav {
@@ -32,7 +32,7 @@ nav {
 
 a {
   padding: 0 20px;
-  margin: 0;
+  margin: auto;
   color: #545D4A;
   background-color: #f1ba12;
 }
@@ -40,7 +40,7 @@ a {
 .jumbotron {
   display: block;
   align-items: center;
-  background-color: #AFACCC;
+  background-color: #f1ba12;
   background-size: cover;
   color: #ffffff;
   height: 200px;
@@ -48,17 +48,13 @@ a {
 
 .jumbotron h5 {
   margin: 0 0 20px;
-  color: #431c5d;
-}
-
-.col-md-6 {
-  margin: 0 0 30px;
+  color: #545D4A;
 }
 
 .btn.btn-primary {
   border-radius: 2px;
   border: 0px;
-  color: #fbd1d5;
+  color: #f1ba12;
   background-color: #ffffff;
 }
 
@@ -67,9 +63,13 @@ a {
   background-color: #f1ba12;
 }
 
-.rsvp-form {
-  margin: 100px;
+.RSVP-form {
+  margin: 50px;
+  width: auto;
   justify-content: center;
   align-content: center;
-  position: center;
+  background-color: #A0AA97;
+  color: #30332D;
+  display: inline-block;
+  vertical-align: middle;
 }

@@ -22,7 +22,7 @@
       </div>
     </header>
     <section>
-      <div class="RSVP-form col-md-6">
+      <div class="RSVP-form">
         <form class="RSVP-form" action="/rsvpConfirm" method="POST">
           <div class="mb-3">
             <label for="rsvp-key" class="form-label">RSVP Key (can be found on the invitation)</label>
@@ -35,13 +35,13 @@
           <div>
             <h6>Will you be attending?</h6>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="rsvp" id="RSVP-info-yes">
+              <input class="form-check-input" type="radio" name="rsvp" id="RSVP-info-yes" value='Yes'>
               <label class="form-check-label" for="RSVP-info-yes">
                 Yes
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="rsvp" id="RSVP-info-no">
+              <input class="form-check-input" type="radio" name="rsvp" id="RSVP-info-no" value='No'>
               <label class="form-check-label" for="RSVP-info-no">
                 No
               </label>
@@ -50,13 +50,13 @@
           <div>
             <h6>Will you have a plus one (if the invitation allows - otherwise select no)</h6>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="plus-one" id="plus-one-yes">
+              <input class="form-check-input" type="radio" name="plus-one" id="plus-one-yes" value="Yes">
               <label class="form-check-label" for="plus-one-yes">
                 Yes
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="plus-one" id="plus-one-no">
+              <input class="form-check-input" type="radio" name="plus-one" id="plus-one-no" value="No">
               <label class="form-check-label" for="plus-one-no">
                 No
               </label>
