@@ -75,3 +75,18 @@ a {
   color: #30332D;
   font-weight: bold;
 }
+
+.map {
+  width: 80%;
+  height: 70%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 5px;
+  padding: 20px;
+  background-color: #A0AA97;
+  color: #30332D;
+  font-weight: bold;
+  text-align: center;
+}
