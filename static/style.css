@@ -64,12 +64,14 @@ a {
 }
 
 .RSVP-form {
-  margin: 50px;
-  width: auto;
-  justify-content: center;
-  align-content: center;
+  width: 500px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 5px;
+  padding: 20px;
   background-color: #A0AA97;
   color: #30332D;
-  display: inline-block;
-  vertical-align: middle;
+  font-weight: bold;
 }
