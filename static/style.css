@@ -1,6 +1,7 @@
 body {
   font-family: Roboto, sans-serif;
-  background-image: url('https://content.codecademy.com/courses/learn-css-selectors-visual-rules/hypnotize_bg.png');
+  background-image: url('images/floral_background_01.jpg');
+  /*<a href='https://www.freepik.com/vectors/wedding'>Wedding vector created by BiZkettE1 - www.freepik.com</a>*/
 }
 
 header {
@@ -9,7 +10,7 @@ header {
 }
 
 header h1 {
-  tex
+  text-align: left;
 }
 
 header .row{
@@ -32,7 +33,8 @@ nav {
 a {
   padding: 0 20px;
   margin: 0;
-  color: #7c677f;
+  color: #545D4A;
+  background-color: #f1ba12;
 }
 
 .jumbotron {
@@ -62,11 +64,12 @@ a {
 
 .btn.btn-primary:hover {
   color: #ffffff;
-  background-color: #fbd1d5;
+  background-color: #f1ba12;
 }
 
 .rsvp-form {
   margin: 100px;
   justify-content: center;
   align-content: center;
+  position: center;
 }
