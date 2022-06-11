@@ -97,3 +97,7 @@ nav {
 .map li, .map a {
   color: #30332D;
 }
+
+.hidden {
+  visibility: hidden;
+}
