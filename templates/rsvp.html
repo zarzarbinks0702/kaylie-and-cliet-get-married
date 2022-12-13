@@ -21,7 +21,7 @@
         </nav>
       </div>
     </header>
-    <section class='hidden' id='RSVP-Form'>
+    <section class='visible' id='RSVP-Form'>
       <div class="RSVP-form">
         <form class="RSVP-form" action="/rsvpConfirm" method="POST">
           <div class="mb-3">
@@ -47,8 +47,30 @@
               </label>
             </div>
           </div>
+
           <div>
-            <h6>Will you have a plus one (if the invitation allows - otherwise select no)</h6>
+            <h6>Please choose your preferred meal. Please note all items, including toppings and sauces, are served buffet style.</h6>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="food-choice" id="food-choice-chicken" value="Chicken">
+              <label class="form-check-label" for="food-choice-chicken">
+                Chicken
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="food-choice" id="food-chice-steak" value="Steak">
+              <label class="form-check-label" for="food-choice-steak">
+                Steak
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="food-choice" id="food-chice-veggie" value="Veggie">
+              <label class="form-check-label" for="food-choice-veggie">
+                Vegetarian/Vegan
+              </label>
+            </div>
+          </div>
+          <div>
+            <h6>Will you have a plus one, if specified on the invitation?</h6>
             <div class="form-check">
               <input class="form-check-input" type="radio" name="plus-one" id="plus-one-yes" value="Yes">
               <label class="form-check-label" for="plus-one-yes">
@@ -62,11 +84,43 @@
               </label>
             </div>
           </div>
+          <div>
+            <h6>Please choose your preferred meal for your plus one, if applicable. Please note all items, including toppings and sauces, are served buffet style.</h6>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="plus-one-food" id="food-choice-chicken-plus-one" value="Chicken">
+              <label class="form-check-label" for="food-choice-chicken-plus-one">
+                Chicken
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="plus-one-food" id="food-choice-steak-plus-one" value="Steak">
+              <label class="form-check-label" for="food-choice-steak-plus-one">
+                Steak
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="plus-one-food" id="food-choice-veggie-plus-one" value="Veggie">
+              <label class="form-check-label" for="food-choice-veggie-plus-one">
+                Vegetarian/Vegan
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="plus-one-food" id="food-choice-na" value="Not Applicable">
+              <label class="form-check-label" for="food-choice-na">
+                N/A
+              </label>
+            </div>
+          </div>
+          <div>
+          <div class="mb-3">
+            <label for="note" class="form-label">Anything we should know (food allergies, song requests, etc)?</label>
+            <input type="text" class="form-control" id="notes" name="notes" placeholder="Notes">
+          </div>
           <button type="submit" class="btn btn-primary mb-3">RSVP!</button>
         </form>
       </div>
     </section>
-    <section class='visible' id='RSVP-Form-Placeholder'>
+    <section class='hidden' id='RSVP-Form-Placeholder'>
       <h2>RSVPs will be available soon! Check back on DD/MM/YYYY to RSVP.</h2>
     </section>
   </body>

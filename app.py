@@ -8,7 +8,36 @@ import json
 #init app and DB
 app = Flask(__name__)
 
-app.config['RSVP-KEYS'] = ['ButlerWedding1', 'ButerWedding2']
+app.config['RSVP-KEYS'] = ['ButlerReception86474',
+'ButlerReception41272',
+'ButlerReception95662',
+'ButlerReception63633',
+'ButlerReception57989',
+'ButlerReception48593',
+'ButlerReception92494',
+'ButlerReception61566',
+'ButlerReception39017',
+'ButlerReception66428',
+'ButlerReception77868',
+'ButlerReception51638',
+'ButlerReception40750',
+'ButlerReception98924',
+'ButlerReception40638',
+'ButlerReception89221',
+'ButlerReception58429',
+'ButlerReception56758',
+'ButlerReception91305',
+'ButlerReception16122',
+'ButlerReception44981',
+'ButlerReception22639',
+'ButlerReception27425',
+'ButlerReception94260',
+'ButlerReception96462',
+'ButlerReception77450',
+'ButlerReception78386',
+'ButlerReception33081',
+'ButlerReception51065',
+'ButlerReception40780']
 
 #############################################################
 #############################################################
@@ -32,6 +61,7 @@ def schedule():
 @app.route("/registry", methods=["GET", "POST"])
 def registry():
     return render_template("registry.html")
+
 @app.route("/rsvpConfirm", methods=["GET", "POST"])
 def rsvp_confirm():
     if request.method == "POST":
@@ -40,10 +70,13 @@ def rsvp_confirm():
             name = request.form.get("name")
             rsvp = request.form.get("rsvp")
             plus_one = request.form.get("plus-one")
-            guest = (name, rsvp, plus_one)
+            food = request.form.get("food-choice")
+            plus_one_food = request.form.get("plus-one-food")
+            note = request.form.get("notes")
+            guest = (name, rsvp, food, plus_one, plus_one_food, note)
             conn = sql.connect('static/wedding.db')
             cursor = conn.cursor()
-            insert = 'INSERT INTO guest_list(Name, RSVP, Plus_One) VALUES (?,?,?)'
+            insert = 'INSERT INTO guest_list(Name, RSVP, Food_Choice, Plus_One, Plus_One_Food, Notes) VALUES (?,?,?,?,?)'
             cursor.execute(insert, guest)
             conn.commit()
             conn.close()
