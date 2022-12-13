@@ -28,6 +28,10 @@ h3 {
   color: #74263a;
 }
 
+h2 {
+  color: #74263a;
+}
+
 nav {
   display: flex;
   justify-content: flex-end;
@@ -66,11 +70,9 @@ nav {
 }
 
 .RSVP-form {
-  width: 500px;
-  position: absolute;
+  width: auto;
+  position: center;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   margin: 5px;
   padding: 20px;
   background-color: #9567a5;

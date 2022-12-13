@@ -21,11 +21,11 @@
         </nav>
       </div>
     </header>
-    <section class='visible' id='RSVP-Form'>
+    <section class='hidden' id='RSVP-Form'>
       <div class="RSVP-form">
         <form class="RSVP-form" action="/rsvpConfirm" method="POST">
           <div class="mb-3">
-            <label for="rsvp-key" class="form-label">RSVP Key (can be found on the invitation)</label>
+            <label for="rsvp-key" class="form-label">RSVP Key (can be found on the RSVP card included with your invitation)</label>
             <input type="text" class="form-control" id="rsvp-key" name="key" placeholder="ButlerWedding12345">
           </div>
           <div class="mb-3">
@@ -120,8 +120,8 @@
         </form>
       </div>
     </section>
-    <section class='hidden' id='RSVP-Form-Placeholder'>
-      <h2>RSVPs will be available soon! Check back on DD/MM/YYYY to RSVP.</h2>
+    <section class='visible' id='RSVP-Form-Placeholder'>
+      <h2><center>RSVPs will be available soon! Check back once invitations are sent to RSVP.</center></h2>
     </section>
   </body>
 </html>
