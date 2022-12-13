@@ -1,6 +1,6 @@
 body {
   font-family: Roboto, sans-serif;
-  background-color: #abbbac;
+  background-color: #d6cc64;
 }
 
 header {
@@ -21,11 +21,11 @@ header .row{
 h1 {
   font-weight: 700;
   margin: 0;
-  color: #30332D;
+  color: #74263a;
 }
 
 h3 {
-  color: #30332D;
+  color: #74263a;
 }
 
 nav {
@@ -36,13 +36,13 @@ nav {
 .nav a {
   padding: 0 20px;
   margin: auto;
-  color: #545D4A;
+  color: #983562;
 }
 
 .jumbotron {
   display: block;
   align-items: center;
-  background-color: #f1ba12;
+  background-color: #c37ab9;
   background-size: cover;
   color: #ffffff;
   height: 200px;
@@ -50,19 +50,19 @@ nav {
 
 .jumbotron h5 {
   margin: 0 0 20px;
-  color: #545D4A;
+  color: #983562;
 }
 
 .btn.btn-primary {
   border-radius: 2px;
   border: 0px;
-  color: #f1ba12;
+  color: #c37ab9;
   background-color: #ffffff;
 }
 
 .btn.btn-primary:hover {
   color: #ffffff;
-  background-color: #f1ba12;
+  background-color: #c37ab9;
 }
 
 .RSVP-form {
@@ -73,8 +73,8 @@ nav {
   transform: translate(-50%, -50%);
   margin: 5px;
   padding: 20px;
-  background-color: #A0AA97;
-  color: #30332D;
+  background-color: #9567a5;
+  color: #74263a;
   font-weight: bold;
 }
 
@@ -87,8 +87,8 @@ nav {
   transform: translate(-50%, -50%);
   margin: 5px;
   padding: 20px;
-  background-color: #A0AA97;
-  color: #30332D;
+  background-color: #9567a5;
+  color: #74263a;
   font-weight: bold;
 }
 
@@ -101,8 +101,8 @@ nav {
   transform: translate(-50%, -50%);
   margin: 5px;
   padding: 20px;
-  background-color: #A0AA97;
-  color: #30332D;
+  background-color: #9567a5;
+  color: #74263a;
   font-weight: bold;
 }
 
@@ -112,7 +112,7 @@ nav {
 }
 
 .map li, .map a {
-  color: #30332D;
+  color: #74263a;
 }
 
 .hidden {
@@ -160,5 +160,5 @@ nav {
 .registries a {
   font-size: 30px;
   font-weight: bolder;
-  color: #30332D;
+  color: #74263a;
 }
