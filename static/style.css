@@ -79,12 +79,11 @@ nav {
 }
 
 #hotel_map {
-  width: 80%;
+  width: 90%;
   height: auto;
-  position: absolute;
-  left: 50%;
+  position: flex;
+  left: 5%;
   top: 50%;
-  transform: translate(-50%, -50%);
   margin: 5px;
   padding: 20px;
   background-color: #9567a5;
@@ -93,12 +92,11 @@ nav {
 }
 
 #travel_map {
-  width: 80%;
+  width: 90%;
   height: auto;
-  position: absolute;
-  left: 50%;
+  position: flex;
+  left: 5%;
   top: 125%;
-  transform: translate(-50%, -50%);
   margin: 5px;
   padding: 20px;
   background-color: #9567a5;
