@@ -54,7 +54,6 @@ nav {
 }
 
 .jumbotron h5 {
-  margin: 0 0 20px;
   color: #983562;
 }
 
@@ -126,14 +125,19 @@ nav {
   padding: 5px;
   margin-bottom: 20px;
 }
-
 #pic1,
-#pic3 {
+#pic2,
+#pic3,
+#pic4,
+#pic5,
+#pic6,
+#pic7,
+#pic8,
+#pic9,
+#pic10,
+#pic11 {
   height: 550px;
-}
-
-#pic2 {
-  height: 550px;
+  margin: 5px;
 }
 
 #about-us {
@@ -145,6 +149,7 @@ nav {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  background-color: #9567a5;
 }
 
 .logo {
@@ -175,5 +180,9 @@ nav {
 }
 
 .about-us {
+  background-color: #9567a5;
+}
+
+#registry-placeholder {
   background-color: #9567a5;
 }
