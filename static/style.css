@@ -1,6 +1,7 @@
 body {
   font-family: Roboto, sans-serif;
   background-color: #d6cc64;
+  background-image: url("images/mask.png");
 }
 
 header {
@@ -161,4 +162,18 @@ nav {
   font-size: 30px;
   font-weight: bolder;
   color: #74263a;
+}
+
+#masquerade {
+  width: 75px;
+  height: 75px;
+  justify: left;
+}
+
+#about-us-head h1{
+  font-weight: bold;
+}
+
+.about-us {
+  background-color: #9567a5;
 }
