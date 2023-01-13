@@ -33,13 +33,15 @@ h2 {
   color: #74263a;
 }
 
-nav {
+.nav {
   display: flex;
-  justify-content: flex-end;
+  list-style-type: none;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 17em;
 }
 
 .nav a {
-  padding: 0 20px;
   margin: auto;
   color: #983562;
 }
@@ -125,20 +127,6 @@ nav {
   padding: 5px;
   margin-bottom: 20px;
 }
-#pic1,
-#pic2,
-#pic3,
-#pic4,
-#pic5,
-#pic6,
-#pic7,
-#pic8,
-#pic9,
-#pic10,
-#pic11 {
-  height: 550px;
-  margin: 5px;
-}
 
 #about-us {
   margin-bottom: 25px;
@@ -186,4 +174,28 @@ nav {
 
 #registry-placeholder {
   background-color: #9567a5;
+}
+
+.carouselslide {
+  justify-content: center;
+}
+
+.carousel-item {
+  width: 800px;
+  height: auto;
+}
+
+header {
+  justify-content: center;
+}
+
+.col-centered{
+   float: none;
+   margin: 0 auto;
+   justify-content: center;
+}
+
+.carousel-item img {
+  height: 550px;
+  width: auto;
 }
