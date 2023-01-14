@@ -176,13 +176,8 @@ h2 {
   background-color: #9567a5;
 }
 
-.carouselslide {
-  justify-content: center;
-}
-
 .carousel-item {
-  width: 800px;
-  height: auto;
+  text-align: center;
 }
 
 header {
@@ -191,11 +186,18 @@ header {
 
 .col-centered{
    float: none;
-   margin: 0 auto;
+   margin: auto;
    justify-content: center;
 }
 
 .carousel-item img {
-  height: 550px;
-  width: auto;
+  display: flex;
+  height: 600px;
+}
+
+.carousel-inner {
+  background-color: #b19b6c;
+  width: 100%;
+  display: flex;
+  max-height: 600px;
 }
