@@ -81,6 +81,7 @@ def rsvp_confirm():
             insert = 'INSERT INTO guest_list(Name, RSVP, Food_Choice, Plus_One, Plus_One_Food, Notes) VALUES (?,?,?,?,?)'
             cursor.execute(insert, guest)
             conn.commit()
+            cursor.close()
             conn.close()
             app.config['RSVP-KEYS'].remove(rsvp_key)
             message = "RSVP confirmed. We can't wait to celebrate with you!"
