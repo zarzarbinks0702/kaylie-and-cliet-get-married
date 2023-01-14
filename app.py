@@ -1,9 +1,10 @@
 from flask import Flask, render_template, jsonify, request, redirect
-import sqlite3 as sql
+import psycopg2 as sql
 import pandas as pd
 import numpy as np
 import os
 import json
+from config.py import config
 
 #init app and DB
 app = Flask(__name__)
@@ -74,7 +75,8 @@ def rsvp_confirm():
             plus_one_food = request.form.get("plus-one-food")
             note = request.form.get("notes")
             guest = (name, rsvp, food, plus_one, plus_one_food, note)
-            conn = sql.connect('static/wedding.db')
+            params = config()
+            conn = sql.connect(**params)
             cursor = conn.cursor()
             insert = 'INSERT INTO guest_list(Name, RSVP, Food_Choice, Plus_One, Plus_One_Food, Notes) VALUES (?,?,?,?,?)'
             cursor.execute(insert, guest)
