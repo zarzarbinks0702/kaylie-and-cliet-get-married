@@ -1,5 +1,5 @@
 body {
-  font-family: 'Satisfy', cursive;
+  font-family: 'Cinzel', serif;
   background-color: #560001;
   background-image: url("images/mask.png");
 }
@@ -12,7 +12,7 @@ header {
 header h1 {
   text-align: center;
   font-size: 50px;
-  font-family: 'Creepster', cursive;
+  font-family: 'Tangerine', cursive;
 }
 
 header .row{
@@ -25,17 +25,17 @@ h1 {
   margin: 0;
   color: #b19b6c;
   font-size: 100px;
-  font-family: 'Creepster', cursive;
+  font-family: 'Tangerine', cursive;
 }
 
 h3 {
   color: #b19b6c;
-  font-family: 'Creepster', cursive;
+  font-family: 'Tangerine', cursive;
 }
 
 h2 {
   color: #b19b6c;
-  font-family: 'Creepster', cursive;
+  font-family: 'Tangerine', cursive;
 }
 
 p, li {
