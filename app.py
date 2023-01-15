@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 import os
 import json
-from config.py import config
+from config.py import configdb
 
 #init app and DB
 app = Flask(__name__)
@@ -75,7 +75,7 @@ def rsvp_confirm():
             plus_one_food = request.form.get("plus-one-food")
             note = request.form.get("notes")
             guest = (name, rsvp, food, plus_one, plus_one_food, note)
-            params = config()
+            params = configdb()
             conn = sql.connect(**params)
             cursor = conn.cursor()
             insert = 'INSERT INTO guest_list(Name, RSVP, Food_Choice, Plus_One, Plus_One_Food, Notes) VALUES (?,?,?,?,?)'
