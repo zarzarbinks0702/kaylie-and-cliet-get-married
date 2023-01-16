@@ -24,7 +24,7 @@ h1 {
   font-weight: 900;
   margin: 0;
   color: #b19b6c;
-  font-size: 3em;
+  font-size: 90px;
   font-family: 'Tangerine', cursive;
 }
 
@@ -36,11 +36,13 @@ h3 {
 h2 {
   color: #b19b6c;
   font-family: 'Tangerine', cursive;
+  font-size: 50px;
 }
 
 p, li {
   color: #b19b6c;
   padding-bottom: 15px;
+  font-size-adjust: auto;
 }
 
 @media (min-width: 780px) {
@@ -168,6 +170,7 @@ p, li {
   top: 50%;
   transform: translate(-50%, -50%);
   background-color: #34604c;
+  font-weight: bold;
 }
 
 .logo {
@@ -240,4 +243,19 @@ header {
 .col-sm-12 {
   text-align: center;
   width: 100%;
+}
+
+.details-list {
+  list-style: none;
+}
+
+h6 {
+  padding: 5px 0;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.form-label {
+  padding: 5px 0;
+  margin: 5px 0;
 }
