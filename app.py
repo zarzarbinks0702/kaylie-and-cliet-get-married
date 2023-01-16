@@ -1,5 +1,5 @@
 from flask import Flask, render_template, jsonify, request, redirect
-import psycopg2 as sql
+import sqlite3 as sql
 import pandas as pd
 import numpy as np
 import os
