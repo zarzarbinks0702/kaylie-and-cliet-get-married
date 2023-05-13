@@ -43,100 +43,12 @@
     </header>
     <section class='hidden' id='RSVP-Form'>
       <div class="RSVP-form">
-        <form class="RSVP-form" action="/rsvpConfirm" method="POST">
+        <form class="RSVP-form" action="/rsvpContinue1" method="POST">
           <div class="mb-3">
             <label for="rsvp-key" class="form-label">RSVP Key (can be found on the RSVP card included with your invitation)</label>
             <input type="text" class="form-control" id="rsvp-key" name="key" placeholder="ButlerWedding12345">
           </div>
-          <div class="mb-3">
-            <label for="guest-name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="guest name" name="name" placeholder="First Last">
-          </div>
-          <div>
-            <h6>Will you be attending?</h6>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="rsvp" id="RSVP-info-yes" value='Yes'>
-              <label class="form-check-label" for="RSVP-info-yes">
-                Yes
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="rsvp" id="RSVP-info-no" value='No'>
-              <label class="form-check-label" for="RSVP-info-no">
-                No
-              </label>
-            </div>
-          </div>
-
-          <div>
-            <h6>Please choose your preferred meal. Please note all items, including toppings and sauces, are served buffet style.</h6>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="food-choice" id="food-choice-chicken" value="Chicken">
-              <label class="form-check-label" for="food-choice-chicken">
-                Chicken
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="food-choice" id="food-chice-steak" value="Steak">
-              <label class="form-check-label" for="food-choice-steak">
-                Steak
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="food-choice" id="food-chice-veggie" value="Veggie">
-              <label class="form-check-label" for="food-choice-veggie">
-                Vegetarian/Vegan
-              </label>
-            </div>
-          </div>
-          <div>
-            <h6>Will you have a plus one, if specified on the invitation?</h6>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="plus-one" id="plus-one-yes" value="Yes">
-              <label class="form-check-label" for="plus-one-yes">
-                Yes
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="plus-one" id="plus-one-no" value="No">
-              <label class="form-check-label" for="plus-one-no">
-                No
-              </label>
-            </div>
-          </div>
-          <div>
-            <h6>Please choose your preferred meal for your plus one, if applicable. Please note all items, including toppings and sauces, are served buffet style.</h6>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="plus-one-food" id="food-choice-chicken-plus-one" value="Chicken">
-              <label class="form-check-label" for="food-choice-chicken-plus-one">
-                Chicken
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="plus-one-food" id="food-choice-steak-plus-one" value="Steak">
-              <label class="form-check-label" for="food-choice-steak-plus-one">
-                Steak
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="plus-one-food" id="food-choice-veggie-plus-one" value="Veggie">
-              <label class="form-check-label" for="food-choice-veggie-plus-one">
-                Vegetarian/Vegan
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="plus-one-food" id="food-choice-na" value="Not Applicable">
-              <label class="form-check-label" for="food-choice-na">
-                N/A
-              </label>
-            </div>
-          </div>
-          <div>
-          <div class="mb-3">
-            <label for="note" class="form-label">Anything we should know (food allergies, song requests, etc)?</label>
-            <input type="text" class="form-control" id="notes" name="notes" placeholder="Notes">
-          </div>
-          <button type="submit" class="btn btn-primary mb-3">RSVP!</button>
+          <button type="submit" class="btn btn-primary mb-3">Continue</button>
         </form>
       </div>
     </section>

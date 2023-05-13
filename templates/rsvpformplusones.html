@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Tangerine&display=swap" rel="stylesheet">
+    <title>Becoming the Butlers</title>
+  </head>
+  <body>
+    <header class="container">
+      <div class="row">
+        <h1 class="col-sm-12">Cliet and Kaylie</h1>
+      </div>
+      <div class="row">
+        <nav class="navbar navbar-expand-md">
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/rsvp">RSVP</a></li>
+            <li class="nav-item"><a class="nav-link" href="/travel">Travel and Transportation</a></li>
+            <li class="nav-item"><a class="nav-link" href="/schedule">Day-Of Information</a></li>
+            <li class="nav-item"><a class="nav-link" href="/registry">Registry</a></li>
+          </ul>
+        </nav>
+        <nav class="navbar container-fluid dropdown ml-auto">
+          <a class="nav-link dropdown-toggle btn btn-primary" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Site Navigation</a>
+          <div class="dropdown-menu">
+            <ul class="nav navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="/rsvp">RSVP</a></li>
+              <li class="nav-item"><a class="nav-link" href="/travel">Travel and Transportation</a></li>
+              <li class="nav-item"><a class="nav-link" href="/schedule">Day-Of Information</a></li>
+              <li class="nav-item"><a class="nav-link" href="/registry">Registry</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section class='visible' id='RSVP-Form'>
+      <div class="RSVP-form">
+        <form class="RSVP-form" action="/rsvpConfirm" method="POST">
+          <div class="mb-3">
+            <label for="guest-name" class="form-label">Name - Person 1</label>
+            <input type="text" class="form-control" id="guest name" name="name" placeholder="First Last" required>
+          </div>
+          <div>
+            <h6>Will you be attending the reception?</h6>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="rsvp" id="RSVP-info-yes" value='Yes'>
+              <label class="form-check-label" for="RSVP-info-yes">
+                Yes
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="rsvp" id="RSVP-info-no" value='No'>
+              <label class="form-check-label" for="RSVP-info-no">
+                No
+              </label>
+            </div>
+          </div>
+          <div>
+            <h6>What kind of burger would you like?</h6>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="food-choice" id="food-choice-chicken" value="Beef">
+              <label class="form-check-label" for="food-choice-beef">
+                Beef
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="food-choice" id="food-chice-steak" value="Turkey">
+              <label class="form-check-label" for="food-choice-turkey">
+                Turkey
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="food-choice" id="food-chice-veggie" value="Chicken">
+              <label class="form-check-label" for="food-choice-chicken">
+                Chicken
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="food-choice" id="food-chice-veggie" value="Impossible">
+              <label class="form-check-label" for="food-choice-veggie">
+                Impossible Patty (Vegetarian/Vegan friendly)
+              </label>
+            </div>
+          </div>
+          <h6>What kind of cheese would you like?</h6>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="cheese1" id="food-choice-chicken" value="Cheddar">
+            <label class="form-check-label" for="cheese1-cheddar">
+              Cheddar
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="cheese1" id="food-chice-steak" value="American">
+            <label class="form-check-label" for="cheese1-american">
+              American
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="cheese1" id="food-chice-veggie" value="Monterrey Jack">
+            <label class="form-check-label" for="cheese1-mj">
+              Monterrey Jack
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="cheese1" id="food-chice-veggie" value="None">
+            <label class="form-check-label" for="cheese1-none">
+              None
+            </label>
+          </div>
+          <div>
+            <div class="mb-3">
+              <label for="plus-one-name" class="form-label">Name - Person 2/Guest for the reception (Type 'None' if no second person/guest)</label>
+              <input type="text" class="form-control" id="plus one name" name="plus-one" placeholder="First Last">
+            </div>
+          </div>
+          <div>
+            <h6>What kind of burger would the second person like? (Select 'None' if no second person/guest)</h6>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="plus-one-food" id="plus-one-food-choice-chicken" value="Beef">
+              <label class="form-check-label" for="plus-one-food-choice-beef">
+                Beef
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="plus-one-food" id="plus-one-food-chice-steak" value="Turkey">
+              <label class="form-check-label" for="plus-one-food-choice-turkey">
+                Turkey
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="plus-one-food" id="plus-one-food-chice-veggie" value="Chicken">
+              <label class="form-check-label" for="plus-one-food-choice-chicken">
+                Chicken
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="plus-one-food" id="plus-one-food-chice-veggie" value="Impossible">
+              <label class="form-check-label" for="plus-one-food-choice-veggie">
+                Impossible Patty (Vegetarian/Vegan friendly)
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="plus-one-food" id="plus-one-food-choice-na" value="Not Applicable">
+              <label class="form-check-label" for="plus-one-food-choice-na">
+                None
+              </label>
+            </div>
+          </div>
+          <h6>What kind of cheese would the second person like?</h6>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="cheese2" id="food-choice-chicken" value="Cheddar">
+            <label class="form-check-label" for="cheese2-cheddar">
+              Cheddar
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="cheese2" id="food-chice-steak" value="American">
+            <label class="form-check-label" for="cheese2-american">
+              American
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="cheese2" id="food-chice-veggie" value="Monterrey Jack">
+            <label class="form-check-label" for="cheese2-mj">
+              Monterrey Jack
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="cheese2" id="food-chice-veggie" value="None">
+            <label class="form-check-label" for="cheese2-none">
+              None
+            </label>
+          </div>
+          <div class="mb-3">
+            <label for="note" class="form-label">Anything else we should know (food allergies, dietary preferences, etc)?</label>
+            <input type="text" class="form-control" id="notes" name="notes" placeholder="Notes">
+          </div>
+          <button type="submit" class="btn btn-primary mb-3">RSVP!</button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

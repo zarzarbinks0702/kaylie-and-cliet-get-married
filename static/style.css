@@ -39,7 +39,7 @@ h2 {
   font-size: 50px;
 }
 
-p, li {
+p, li, figcaption {
   color: #b19b6c;
   padding-bottom: 15px;
   font-size-adjust: auto;
@@ -174,13 +174,13 @@ p, li {
 }
 
 .logo {
-  width: 500px;
-  height: 500px;
+  width: 300px;
+  height: 300px;
 }
 
 .picture-row {
   display: inline-flex;
-  margin: 30px;
+  padding-bottom: 30px;
   justify-content: center;
 }
 
@@ -247,6 +247,7 @@ header {
 
 .details-list {
   list-style: none;
+  text-align: center;
 }
 
 h6 {
@@ -258,4 +259,10 @@ h6 {
 .form-label {
   padding: 5px 0;
   margin: 5px 0;
+}
+
+#venue-pic {
+  height: 600px;
+  width: auto;
+  padding-bottom: 10px;
 }

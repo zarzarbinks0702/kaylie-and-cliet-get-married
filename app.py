@@ -1,5 +1,5 @@
 from flask import Flask, render_template, jsonify, request, redirect
-import sqlite3 as sql
+import psycopg2 as sql
 import pandas as pd
 import numpy as np
 import os
@@ -8,36 +8,36 @@ import json
 #init app and DB
 app = Flask(__name__)
 
-app.config['RSVP-KEYS'] = ['ButlerReception86474',
-'ButlerReception41272',
-'ButlerReception95662',
-'ButlerReception63633',
-'ButlerReception57989',
-'ButlerReception48593',
-'ButlerReception92494',
-'ButlerReception61566',
-'ButlerReception39017',
-'ButlerReception66428',
-'ButlerReception77868',
-'ButlerReception51638',
-'ButlerReception40750',
-'ButlerReception98924',
-'ButlerReception40638',
-'ButlerReception89221',
-'ButlerReception58429',
-'ButlerReception56758',
-'ButlerReception91305',
-'ButlerReception16122',
-'ButlerReception44981',
-'ButlerReception22639',
-'ButlerReception27425',
-'ButlerReception94260',
-'ButlerReception96462',
-'ButlerReception77450',
-'ButlerReception78386',
-'ButlerReception33081',
-'ButlerReception51065',
-'ButlerReception40780']
+app.config['RSVP-KEYS'] = ['BUTLERRECEPTION48593']
+
+app.config['RSVP-KEYS-BACHELORETTE'] = ['BUTLERRECEPTION92494',
+'BUTLERRECEPTION61566',
+'BUTLERRECEPTION66428',
+'BUTLERRECEPTION51638',
+'BUTLERRECEPTION98924',
+'BUTLERRECEPTION40638',
+'BUTLERRECEPTION33081']
+
+app.config['RSVP-KEYS-PLUS-ONES'] = ['BUTLERRECEPTION95662',
+'BUTLERRECEPTION63633',
+'BUTLERRECEPTION57989',
+'BUTLERRECEPTION39017',
+'BUTLERRECEPTION77868',
+'BUTLERRECEPTION40750',
+'BUTLERRECEPTION89221',
+'BUTLERRECEPTION58429',
+'BUTLERRECEPTION16122',
+'BUTLERRECEPTION27425',
+'BUTLERRECEPTION94260',
+'BUTLERRECEPTION96462',
+'BUTLERRECEPTION77450',
+'BUTLERRECEPTION78386']
+
+app.config['RSVP-KEYS-CEREMONY-MEAL'] = ['BUTLERRECEPTION86474',
+'BUTLERRECEPTION41272',
+'BUTLERRECEPTION56758',
+'BUTLERRECEPTION91305',
+'BUTLERRECEPTION44981']
 
 #############################################################
 #############################################################
@@ -62,29 +62,57 @@ def schedule():
 def registry():
     return render_template("registry.html")
 
+@app.route("/rsvpContinue1", methods=["GET", "POST"])
+def rsvpContinue1():
+    if request.method == "POST":
+        rsvp_key = request.form.get("key")
+        if rsvp_key in app.config['RSVP-KEYS-PLUS-ONES']:
+            return render_template("rsvpformplusones.html")
+        elif rsvp_key in app.config['RSVP-KEYS-BACHELORETTE']:
+            return render_template("rsvpformbachelorette.html")
+        elif rsvp_key in app.config['RSVP-KEYS']:
+            return render_template("rsvpform.html")
+        elif rsvp_key in app.config['RSVP-KEYS-CEREMONY-MEAL']:
+            return render_template("rsvpformceremony.html")
+        else:
+            message = "RSVP failed. Please confirm your RSVP Key is correct and try again later."
+            return render_template("success.html", message=message)
+
 @app.route("/rsvpConfirm", methods=["GET", "POST"])
 def rsvp_confirm():
     if request.method == "POST":
-        rsvp_key = request.form.get("key")
-        if rsvp_key in app.config['RSVP-KEYS']:
-            name = request.form.get("name")
-            rsvp = request.form.get("rsvp")
-            plus_one = request.form.get("plus-one")
-            food = request.form.get("food-choice")
-            plus_one_food = request.form.get("plus-one-food")
-            note = request.form.get("notes")
-            guest = (name, rsvp, food, plus_one, plus_one_food, note)
-            conn = sql.connect("static/wedding.db")
-            cursor = conn.cursor()
-            insert = 'INSERT INTO guest_list(Name, RSVP, Food_Choice, Plus_One, Plus_One_Food, Notes) VALUES (?,?,?,?,?)'
-            cursor.execute(insert, guest)
-            conn.commit()
-            cursor.close()
-            conn.close()
-            app.config['RSVP-KEYS'].remove(rsvp_key)
-            message = "RSVP confirmed. We can't wait to celebrate with you!"
-        else:
-            message = "RSVP failed. Please confirm your RSVP Key is correct and try again later."
+        name = request.form.get("name")
+        rsvp = request.form.get("rsvp")
+        food = request.form.get("food-choice")
+        cheese_1 = request.form.get("cheese1")
+        try: plus_one = request.form.get("plus-one")
+        except: plus_one = "None"
+        try: plus_one_food = request.form.get("plus-one-food")
+        except: plus_one_food = "None"
+        try: cheese_2 = request.form.get("cheese2")
+        except: cheese_2 = "None"
+        try: bachelorette = request.form.get("bachelorette")
+        except: bachelorette = "None"
+        try: ceremony_meal = request.form.get("ceremony-meal")
+        except: ceremony_meal = "None"
+        note = request.form.get("notes")
+        pw = os.environ.get('pw')
+        user = os.environ.get('user')
+        host = os.environ.get('host')
+        db = os.environ.get('db')
+        conn = sql.connect(database=db,
+                    user=user,
+                    password=pw,
+                    host=host, port="5432")
+        cursor = conn.cursor()
+        insert = """INSERT INTO guest_list(Name, RSVP, Food_Choice, Cheese_1, Plus_One, Plus_One_Food, Cheese_2, Bachelorette, Ceremony_Meal, Notes) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"""
+        cursor.execute(insert, (name, rsvp, food, cheese_1, plus_one, plus_one_food, cheese_2, bachelorette, ceremony_meal, note))
+        conn.commit()
+        cursor.close()
+        conn.close()
+        message = "RSVP confirmed. We can't wait to celebrate with you!"
+    else:
+        message = "RSVP failed. Please confirm your RSVP Key is correct and try again later."
     return render_template("success.html", message=message)
 #############################################################
 
